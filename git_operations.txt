@@ -1,0 +1,22 @@
+2026-10-27 Git 初始化与上传命令记录
+工作目录：/home/lcpyspa/spa
+本次不修改 Conda 环境或全局 Git 配置。
+未检测到 Git 作者配置；首次提交仅通过命令参数使用仓库账号名与 GitHub noreply 邮箱。
+以下命令按顺序执行；若失败，以后续追加记录及终端结果为准。
+
+cd /home/lcpyspa/spa
+git init -b main
+git remote add origin https://github.com/LouChen-med/spatial_learn.git
+git add .gitignore AGENTS.md README.md git_operations.txt spa04 spa05
+git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com commit -m "Initial commit: spatial learning notebooks"
+git push -u origin main
+
+执行结果：git init -b main 因本机 Git 版本不支持 -b 失败，上述后续命令未执行。
+改用兼容命令：
+cd /home/lcpyspa/spa
+git init
+git symbolic-ref HEAD refs/heads/main
+git remote add origin https://github.com/LouChen-med/spatial_learn.git
+git add .gitignore AGENTS.md README.md git_operations.txt spa04 spa05
+git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com commit -m "Initial commit: spatial learning notebooks"
+git push -u origin main
