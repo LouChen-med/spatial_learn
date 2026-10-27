@@ -20,3 +20,11 @@ git remote add origin https://github.com/LouChen-med/spatial_learn.git
 git add .gitignore AGENTS.md README.md git_operations.txt spa04 spa05
 git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com commit -m "Initial commit: spatial learning notebooks"
 git push -u origin main
+
+执行结果：初始化及本地提交成功；推送失败：
+fatal: could not read Username for 'https://github.com': No such device or address
+尚未上传到远端。记录此状态并提交文档：
+cd /home/lcpyspa/spa
+git add AGENTS.md git_operations.txt
+git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com commit -m "Document push blocked by missing GitHub credentials"
+认证完成后待执行（本次未执行）：git push -u origin main
