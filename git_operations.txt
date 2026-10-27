@@ -28,3 +28,42 @@ cd /home/lcpyspa/spa
 git add AGENTS.md git_operations.txt
 git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com commit -m "Document push blocked by missing GitHub credentials"
 认证完成后待执行（本次未执行）：git push -u origin main
+
+2026-10-27 再次按用户要求上传当前项目
+工作目录：/home/lcpyspa/spa
+保留现有 Notebook 代码、输出及用户修改；不上传 .ipynb_checkpoints、Space Ranger 运行结果、FASTQ 目录及 FASTQ 压缩包。
+未修改 Conda 环境、全局 Git 配置或远端地址；提交作者沿用已有提交身份，仅通过本次命令参数指定。
+
+只读认证及远端预检：
+cd /home/lcpyspa/spa
+env GIT_TERMINAL_PROMPT=0 git ls-remote --heads origin main
+env GIT_TERMINAL_PROMPT=0 git -c credential.interactive=false push --dry-run origin main
+
+预检结果：远端 main 为 eb3b206335c6cb36bb35954f11531de58366ac47，与检查时的本地 HEAD 一致。
+推送预检失败：fatal: could not read Username for 'https://github.com': terminal prompts disabled
+当前无已配置的 Git credential helper、GitHub CLI 或可用的 GH_TOKEN/GITHUB_TOKEN；本文件不记录任何密码或令牌。
+
+本次暂存、提交及实际推送命令：
+cd /home/lcpyspa/spa
+git add -- .gitignore AGENTS.md git_operations.txt spa04/README.md spa04/ST_introduction_lc.ipynb spa04/ST_introduction_lc.py
+git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com commit -m "Update spatial learning notebooks, scripts and documentation"
+env GIT_TERMINAL_PROMPT=0 git -c credential.interactive=false push -u origin main
+
+认证尚未配置；若实际推送仍报上述凭据错误，本地提交会保留，但不代表已上传。完成后通过 git status --short --branch 及 git ls-remote --heads origin main 核对。
+
+本地提交已成功生成 af8a2dd，包含 6 个文件的当前修改。
+首次实际推送失败：GnuTLS recv error (-110): The TLS connection was non-properly terminated.
+为排除临时 TLS 中断，使用仅对本次命令生效的 HTTP/1.1 设置及超时重试，不修改全局配置：
+cd /home/lcpyspa/spa
+timeout 60s env GIT_TERMINAL_PROMPT=0 git -c credential.interactive=false -c http.version=HTTP/1.1 -c http.lowSpeedLimit=1 -c http.lowSpeedTime=30 push -u origin main
+
+重试结果：60 秒内未完成，timeout 返回 124；未收到推送成功响应。
+结论：本地修改已经提交，但尚未上传成功；既有缺少 HTTPS 凭据的问题，也遇到 GitHub TLS 连接中断/超时。
+保留 Python 导出文件原有的 Markdown 行尾空格，不因上传任务改动教学内容；静态 Python 语法检查通过。
+将本次推送结果记录补入尚未上传的本地提交，不改写任何已推送提交：
+cd /home/lcpyspa/spa
+git add -- AGENTS.md git_operations.txt
+git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com commit --amend --no-edit
+
+恢复 GitHub 连接并完成认证后，待用户在终端重试（本次尚未执行）：
+git -C /home/lcpyspa/spa push -u origin main
