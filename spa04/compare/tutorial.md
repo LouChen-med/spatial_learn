@@ -57,12 +57,13 @@ spaceranger count \
 ## 如果想严格复现 `out_10x`
 
 1. 准备相同 FASTQ、相同 mm10-2020-A reference、相同 Mouse Probe Set v2.0、相同 CytAssist/H&E 图像。
-2. 获取官方用于这次运行的 `Visium_HD_Mouse_Brain.json`，它是 **Loupe alignment 输入**，不是任意文件名相似的 JSON；当前 `out_10x` 没有该文件。
+2. 使用已只读核验的 `/data/04_ST_introduction/data/spaceranger/Visium_HD_Mouse_Brain_alignment_file.json` 作为 **Loupe alignment 输入**。虽然 basename 与官方命令不同，它的组织 mask 与官网 2/8 µm 输出逐项一致，阵列到 CytAssist 的变换也在浮点精度内一致；详见 `results/alignment_file_interpretation.md`。
 3. 用与下载输出相同的 **Space Ranger 3.0.0** 以及上述命令。即使用同一版本，没有官方 alignment 文件也不构成同参数复现。
 4. 使用新的、尚不存在的项目内输出目录；不要覆盖你已经跑好的 `Visium_HD_Mouse_Brain`。
 5. 按 `results/assessment.md` 的标准检查 reads、mapping、barcode 交集、tissue mask 和矩阵计数，而不只比较 HTML 文件大小。
 
-项目内现有 `out_10x` 没有 `Visium_HD_Mouse_Brain.json`；缺少它时不要杜撰 `--loupe-alignment` 路径，也不要用 `scalefactors_json.json` 代替。
+项目内 `out_10x` 没有该 JSON 副本，但用户已提供项目外的只读原文件。可直接使用上述路径，不必改名，也不能用 `scalefactors_json.json` 代替。
+此文件含阵列定位和组织选择，但没有 `cytAssistInfo`，因此不能笼统解释成同时保存了 H&E ↔ CytAssist 的手工配准。
 
 如果继续使用 4.0.1，则应将它视为**新版本重新处理同一数据集**，不是对官网 3.0.0 的逐字节复现。
 资源参数 `--localcores=20`、`--localmem=200`、输出目录以及是否使用 `sudo` 不是这两份结果生物学差异的充分解释；通常不需要为了跑分析而使用 `sudo`，你当前输出的确由 root 持有，但本次未修改其权限。
@@ -70,5 +71,5 @@ spaceranger count \
 ## 本次没有执行的操作
 
 - 没有安装/切换 Space Ranger，没有下载新的大数据。
-- 没有读取 `/data/...` 的项目外输入；仅使用项目内已有运行记录。
+- 初次输出比较没有读取项目外输入；后续按用户明确授权，只读解码了 `/data/.../Visium_HD_Mouse_Brain_alignment_file.json`，未写入 `/data`。
 - 没有重跑 `spaceranger count`，没有改变 Conda、Git 或原始输出权限。

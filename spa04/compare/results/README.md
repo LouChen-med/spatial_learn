@@ -1,6 +1,7 @@
 # results
 
 - `assessment.md`：主要发现、QC 表和分析限制；建议先阅读。
+- `alignment_file_interpretation.md`：只读解码用户提供的 Loupe JSON，解释字段、校验值，并核实其 tissue mask 和坐标变换与官网输出一致。
 - `metrics_comparison.csv`：每个 QC 指标原值、绝对差、相对差；百分比指标的绝对差是百分点；旧版 `Valid UMIs` 对齐新版 `Valid UMI Sequences`。
 - `matrix_comparison.csv`：三个分辨率、raw/filtered 共六组矩阵的 feature 一致性、barcode 交并集、UMI 总量、bin UMI Pearson 和 gene pseudobulk Pearson。
 - `matrix_inventory.csv`：全部 12 个矩阵的形状、非零数、UMI 总量和 tissue 位置数。
