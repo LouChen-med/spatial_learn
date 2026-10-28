@@ -1,0 +1,13 @@
+﻿run,space_ranger_version,bin_size_um,matrix_type,matrix_shape_features_x_barcodes,feature_count,barcode_count,nonzero_entries,total_umis,positions_in_tissue
+local_run,spaceranger-4.0.1,2,raw,32285 x 11222500,32285,11222500,89591981,90808424,6336843
+local_run,spaceranger-4.0.1,2,filtered,19059 x 6336843,19059,6336843,87986556,89190339,6336843
+local_run,spaceranger-4.0.1,8,raw,32285 x 702244,32285,702244,81299116,90808424,397587
+local_run,spaceranger-4.0.1,8,filtered,19059 x 397587,19059,397587,79849418,89310098,397587
+local_run,spaceranger-4.0.1,16,raw,32285 x 175561,32285,175561,69958571,90808424,99948
+local_run,spaceranger-4.0.1,16,filtered,19059 x 99948,19059,99948,68645532,89418152,99948
+official_download,spaceranger-3.0.0,2,raw,32285 x 7186439,32285,7186439,89207602,90415420,6296688
+official_download,spaceranger-3.0.0,2,filtered,19059 x 6296688,19059,6296688,87516594,88708295,6296688
+official_download,spaceranger-3.0.0,8,raw,32285 x 617992,32285,617992,80970170,90415420,393543
+official_download,spaceranger-3.0.0,8,filtered,19059 x 393543,19059,393543,79334533,88708295,393543
+official_download,spaceranger-3.0.0,16,raw,32285 x 172358,32285,172358,69698881,90415420,98917
+official_download,spaceranger-3.0.0,16,filtered,19059 x 98917,19059,98917,68259814,88876474,98917

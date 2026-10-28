@@ -1,0 +1,21 @@
+日期：2026-10-28
+工作目录：/home/lcpyspa/spa
+
+环境：使用现有 cosmx-spatial，不安装软件、不修改 Conda 或 Git。
+完整比较运行命令：
+MPLCONFIGDIR=/home/lcpyspa/spa/spa04/compare/results /home/lcpyspa/miniconda3/bin/conda run --no-capture-output -n cosmx-spatial python spa04/compare/scripts/compare_spaceranger_results.py
+
+验证通过：
+- 比较了 2/8/16 µm 的 raw/filtered 两种 HDF5，两份结果共 12 个矩阵。
+- 每组对应矩阵 feature IDs、名称与顺序一致。
+- 以固定宽度 barcode 内的 array row/column 对齐，不依赖 filtered 矩阵列顺序；对每个 HDF5 抽查前 100 个 barcode 的坐标解析。
+- 每个矩阵累计的 gene UMI 总数、barcode UMI 总数、data 数值之和一致。
+- 每套结果的三个分辨率 raw UMI 总数一致，CSV 对比表与矩阵清单的 UMI 总数一致。
+- 各分辨率 tissue_positions 的组织 bin 数与 metrics_summary 和 filtered 矩阵列数一致。
+- 官方与本地 HTML 原始命令提取非空；只有官方命令包含 --loupe-alignment。
+- 两个 HTML 报告的告警列表均为空。
+- 两边 CytAssist、tissue hires/lowres 三个输出图像的 SHA256 全部一致。
+- 脚本 AST 语法解析通过，tissue-mask 图片已目视检查。
+
+不属于本次验证范围：逐基因逐 bin 全量差分、原始 FASTQ/reference 哈希、完整 probe-set 序列比较、Space Ranger 控制变量重跑、细胞分割真值核验、聚类或细胞类型注释对比。
+在线教程检索限制：10x 页面直接请求返回 HTTP 429，外部搜索未得到可核实的独立同样本教程正文。

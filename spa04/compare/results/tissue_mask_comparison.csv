@@ -1,0 +1,4 @@
+﻿bin_size_um,both_in_tissue,local_only_in_tissue,official_only_in_tissue,in_tissue_jaccard
+2,6276434,60409,20254,0.9873113466728602
+8,392814,4773,729,0.9861868466242882
+16,98759,1189,158,0.986544263081134

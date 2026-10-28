@@ -67,3 +67,11 @@ git -c user.name=LouChen-med -c user.email=LouChen-med@users.noreply.github.com 
 
 恢复 GitHub 连接并完成认证后，待用户在终端重试（本次尚未执行）：
 git -C /home/lcpyspa/spa push -u origin main
+
+2026-10-27 23:20 CST 用户要求直接执行推送
+工作目录：/home/lcpyspa/spa
+cd /home/lcpyspa/spa
+timeout 60s env GIT_TERMINAL_PROMPT=0 git -C /home/lcpyspa/spa push -u origin main
+执行结果：退出码 128，fatal: could not read Username for 'https://github.com': terminal prompts disabled
+已再次确认当前会话未配置 Git credential helper，未安装 GitHub CLI，且未提供 GitHub Token 或 askpass 认证；不在本文件记录任何凭据。
+本次未修改提交、分支、远端地址或 Git 配置；本地提交 d55789c 保留，上传仍被 GitHub 认证阻塞。
