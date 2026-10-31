@@ -666,39 +666,39 @@ adata_pearson_num = sc.experimental.pp.highly_variable_genes(
 
 # 注意：adata_pearson_num 将包含一个 .var 属性，其中标记了被选为 HVG 的基因。
 # 在后续的分析中，应使用这个列表来过滤数据
-
+# %%
 adata_pearson_num
 
 # %%
-import matplotlib.pyplot as plt
-from matplotlib_venn import venn3 # 导入专门用于绘制三集合维恩图的库
+# import matplotlib.pyplot as plt
+# from matplotlib_venn import venn3 # 导入专门用于绘制三集合维恩图的库
 
-# --- 准备三个 HVG 集合 ---
+# # --- 准备三个 HVG 集合 ---
 
-# 集合 1: 基于基因表达离散度（Dis/Seurat 风格）选择的 HVGs
-# .loc[...]：从 adata_dis_num 的 .var 中筛选出 'highly_variable' 为 True 的基因
-# .index.tolist()：提取这些基因的名称（索引）并转换为列表
-# set(...)：将列表转换为集合（set），以便进行集合运算
-list1 = set(adata_dis_num.loc[adata_dis_num['highly_variable']==True].index.tolist())
+# # 集合 1: 基于基因表达离散度（Dis/Seurat 风格）选择的 HVGs
+# # .loc[...]：从 adata_dis_num 的 .var 中筛选出 'highly_variable' 为 True 的基因
+# # .index.tolist()：提取这些基因的名称（索引）并转换为列表
+# # set(...)：将列表转换为集合（set），以便进行集合运算
+# list1 = set(adata_dis_num.loc[adata_dis_num['highly_variable']==True].index.tolist())
 
-# 集合 2: 基于基因归一化（Var/Seurat V3 风格）选择的 HVGs
-list2 = set(adata_var_num.loc[adata_var_num['highly_variable']==True].index.tolist())
+# # 集合 2: 基于基因归一化（Var/Seurat V3 风格）选择的 HVGs
+# list2 = set(adata_var_num.loc[adata_var_num['highly_variable']==True].index.tolist())
 
-# 集合 3: 基于皮尔逊残差（Pearson Residuals）选择的 HVGs
-list3 = set(adata_pearson_num.loc[adata_pearson_num['highly_variable']==True].index.tolist())
+# # 集合 3: 基于皮尔逊残差（Pearson Residuals）选择的 HVGs
+# list3 = set(adata_pearson_num.loc[adata_pearson_num['highly_variable']==True].index.tolist())
 
-# --- 绘制维恩图 ---
+# # --- 绘制维恩图 ---
 
-# venn3：绘制三个集合的维恩图。
-# [list1, list2, list3]：输入三个集合。
-# set_labels=('Dis', 'Var', 'Pearson')：设置三个圆圈（集合）的标签，便于识别。
-venn = venn3([list1, list2, list3], set_labels=('Dis', 'Var', 'Pearson'))
+# # venn3：绘制三个集合的维恩图。
+# # [list1, list2, list3]：输入三个集合。
+# # set_labels=('Dis', 'Var', 'Pearson')：设置三个圆圈（集合）的标签，便于识别。
+# venn = venn3([list1, list2, list3], set_labels=('Dis', 'Var', 'Pearson'))
 
-# 添加标题
-plt.title("Venn Diagram of Three HVGs")
+# # 添加标题
+# plt.title("Venn Diagram of Three HVGs")
 
-# 显示绘制好的图形
-plt.show()
+# # 显示绘制好的图形
+# plt.show()
 
 # %% [markdown]
 # ### 5.4 HVG 选择方法的重叠与差异分析
@@ -733,42 +733,42 @@ adata.var.head()
 # %%
 # --- 基于空间变异度选择高度可变的基因（SVGs） ---
 
-# 设定子样本的比例（例如：15%）
-sample_frac = 0.15
+# # 设定子样本的比例（例如：15%）
+# sample_frac = 0.15
 
-# 从原始 AnnData 对象 (adata) 中随机抽取 15% 的 Spot/观测值，创建一个子样本对象 (adata_sub)
-adata_sub = adata[adata.obs.sample(frac=sample_frac, random_state=1).index].copy()
+# # 从原始 AnnData 对象 (adata) 中随机抽取 15% 的 Spot/观测值，创建一个子样本对象 (adata_sub)
+# adata_sub = adata[adata.obs.sample(frac=sample_frac, random_state=1).index].copy()
 
-# 构建空间邻居图（定义哪些 Spot 彼此相邻）
-# sq.gr.spatial_neighbors：这是 Squidpy 库用于建立空间邻接矩阵的函数
-# coord_type='generic'：指定使用 AnnData.obsm['spatial'] 中的坐标信息来构建邻居图
-# 结果存储在 adata_sub.obsp 和 adata_sub.uns 中
-sq.gr.spatial_neighbors(adata_sub, coord_type='generic')  # 视 coord 类型
+# # 构建空间邻居图（定义哪些 Spot 彼此相邻）
+# # sq.gr.spatial_neighbors：这是 Squidpy 库用于建立空间邻接矩阵的函数
+# # coord_type='generic'：指定使用 AnnData.obsm['spatial'] 中的坐标信息来构建邻居图
+# # 结果存储在 adata_sub.obsp 和 adata_sub.uns 中
+# sq.gr.spatial_neighbors(adata_sub, coord_type='generic')  # 视 coord 类型
 
-# 计算空间自相关性（莫兰系数）
-# sq.gr.spatial_autocorr：计算空间自相关性的函数。
-# mode='moran'：指定使用莫兰系数 (Moran's I) 来量化空间自相关性。
-# n_perms=200：指定进行 200 次置换检验，以计算每个基因的 P 值，用于判断空间自相关是否具有统计显著性
-# 结果存储在 adata_sub.uns['moranI'] 中
-sq.gr.spatial_autocorr(adata_sub, mode='moran', n_perms=200)
+# # 计算空间自相关性（莫兰系数）
+# # sq.gr.spatial_autocorr：计算空间自相关性的函数。
+# # mode='moran'：指定使用莫兰系数 (Moran's I) 来量化空间自相关性。
+# # n_perms=200：指定进行 200 次置换检验，以计算每个基因的 P 值，用于判断空间自相关是否具有统计显著性
+# # 结果存储在 adata_sub.uns['moranI'] 中
+# sq.gr.spatial_autocorr(adata_sub, mode='moran', n_perms=200)
 
-# %%
-# 查看空间变异度较高的基因（SVGs）
-# 根据莫兰系数 (Moran's I) 对基因进行排序，选择
-svg = adata_sub.uns['moranI']['I'].sort_values(ascending=False).head(1000).index.tolist()
-print(f"Top 10 SVGs: {svg[:10]}")
+# # %%
+# # 查看空间变异度较高的基因（SVGs）
+# # 根据莫兰系数 (Moran's I) 对基因进行排序，选择
+# svg = adata_sub.uns['moranI']['I'].sort_values(ascending=False).head(1000).index.tolist()
+# print(f"Top 10 SVGs: {svg[:10]}")
 
-# %%
-# 比较 HVGs 和 SVGs 的重叠情况
-import matplotlib.pyplot as plt
-from matplotlib_venn import venn2
-# 绘制 Venn 图
-svg = set(svg)
-venn = venn2([list3, svg], set_labels=('Var', 'Svg'))
+# # %%
+# # 比较 HVGs 和 SVGs 的重叠情况
+# import matplotlib.pyplot as plt
+# from matplotlib_venn import venn2
+# # 绘制 Venn 图
+# svg = set(svg)
+# venn = venn2([list3, svg], set_labels=('Var', 'Svg'))
 
-# 显示图形
-plt.title("Venn Diagram of HVGs & SVGs")
-plt.show()
+# # 显示图形
+# plt.title("Venn Diagram of HVGs & SVGs")
+# plt.show()
 
 # %% [markdown]
 # 发现通过莫兰系数计算出的所有空间变异基因 (SVGs) 都包含在非空间方法（如 Pearson 残差或 Seurat V3 风格）筛选出的高可变基因 (HVGs) 集合内。这表明：SVG 集合是 HVG 集合的一个子集。从生物学上讲，任何在空间上表现出非随机模式（即具有空间变异性）的基因，必然也是在整个组织中表现出高表达差异的基因。这一结果有力地验证了之前 HVG 筛选步骤的有效性，确认该步骤成功地捕获了所有潜在的生物学信号。因此，可以放心地将 HVGs 视为包含了所有细胞异质性和所有空间结构信号的超集，并进一步使用 SVGs 集合来精确地聚焦于与组织微环境和空间位置强相关的基因集进行深入分析
