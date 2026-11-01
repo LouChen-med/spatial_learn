@@ -1017,7 +1017,7 @@ sc.pl.umap(
 
 # %%
 # 保存最终处理好的 AnnData 对象，供后续分析使用
-adata.write('/data/05_basis/data/adata_processed.h5ad')
+adata.write('/home/lcpyspa/spa/spa05/data/adata_processed.h5ad')
 
 # %% [markdown]
 # ---
@@ -1044,10 +1044,10 @@ sc.tl.rank_genes_groups(
 # --- 提取和排序差异表达基因 (DEGs) ---
 
 # 将 DEGs 结果从 AnnData 转换为 DataFrame。
-rg_df = sc.get.rank_genes_groups_df(adata, group=None) \
-          # 排序：按聚类 ('group') 分组，然后按校正 P 值 ('pvals_adj') 升序和得分 ('scores') 降序排序。
-          .sort_values(["group","pvals_adj","scores"], ascending=[True, True, False])
+rg_df = sc.get.rank_genes_groups_df(adata, group=None).sort_values(["group","pvals_adj","scores"], ascending=[True, True, False])
 
+          # 排序：按聚类 ('group') 分组，然后按校正 P 值 ('pvals_adj') 升序和得分 ('scores') 降序排序。
+         
 topN = 5 # 设定每个组要提取的 Top N 基因数量
 
 # 按聚类分组，提取每个组中最显著的 top N 基因。
