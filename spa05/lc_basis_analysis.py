@@ -832,12 +832,12 @@ plt.show()
 # 保存和读取 AnnData 对象
 # 这里我们将处理后的数据保存为 'adata_processed.h5ad'，以便后续分析使用
 # 同时保存未缩放的原始数据为 'adata_processed_raw.h5ad'
-adata.write('/data/05_basis/data/adata_processed.h5ad')
-adata1.write('/data/05_basis/data/adata_processed_raw.h5ad')
+adata.write('/home/lcpyspa/spa/spa05/data/adata_processed.h5ad')
+adata1.write('/home/lcpyspa/spa/spa05/data/adata_processed_raw.h5ad')
 
 # %%
-adata = sc.read_h5ad('/data/05_basis/data/adata_processed.h5ad')
-adata1 = sc.read_h5ad('/data/05_basis/data/adata_processed_raw.h5ad')
+adata = sc.read_h5ad('/home/lcpyspa/spa/spa05/data/adata_processed.h5ad')
+adata1 = sc.read_h5ad('/home/lcpyspa/spa/spa05/data/adata_processed_raw.h5ad')
 
 # %% [markdown]
 # ### 6.2 t-SNE
@@ -899,6 +899,10 @@ p2 = sc.pl.umap(adata,color='Mbp',ax=axes[1],show=False)
 axes[1].set_title("Scaled data")
 plt.show()
 
+# %%
+sc.tl.leiden(adata,resolution  = 0.5)
+
+
 # %% [markdown]
 # 右图（Scaled data）的 UMAP 将提供一个更清晰、更具生物学可解释性的 Mbp 表达分布可视化，因为数据已经过降噪处理，确保了基因表达差异的颜色映射是可靠的
 
@@ -935,6 +939,10 @@ umap_coords = pd.read_csv(
     index_col=0  # 用 barcode 作为 index
 )
 
+
+# %%
+# 读取 UMAP 坐标
+umap_coords
 # %%
 # 根据 adata.obs_names 的顺序重新索引 umap_coords，并将其存储到 adata.obsm['X_umap'] 中
 # 这样可以确保 UMAP 坐标与 adata 中的 Spot 顺序一致
@@ -985,8 +993,8 @@ sq.pl.spatial_scatter(
     ncols=3,           # 当 'color' 是列表时，指定子图的列数 (可选)
     wspace=0.4,        # 调整多面板图（子图）之间的水平间距 (可选)
     img="hires",       # 指定使用的组织图像分辨率 ('hires' 或 'lowres')
-    alpha=0.7,         # 散点的透明度 (0-1 之间)
-    size=1.2           # 散点的大小 (可选）
+    alpha=0.7         # 散点的透明度 (0-1 之间)
+
 )
 
 # %% [markdown]
