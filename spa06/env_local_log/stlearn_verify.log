@@ -1,0 +1,66 @@
+ENV stlearn
+source: /software/miniconda3/envs/stlearn
+target: /home/lcpyspa/miniconda3/envs/stlearn
+source_package_count: 245
+target_package_count: 245
+missing_package_count: 0
+extra_package_count: 0
+channel_metadata_mismatch_count: 160
+source_pip_package_count: 109
+target_pip_package_count: 109
+pip_missing_packages: []
+pip_extra_packages: []
+pip_version_differences: []
+package_set_match: True
+python_check_rc: 0
+/home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages/louvain/__init__.py:54: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution, DistributionNotFound
+<string>:12: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+{
+  "executable": "/home/lcpyspa/miniconda3/envs/stlearn/bin/python",
+  "imports": {
+    "anndata": {
+      "ok": true,
+      "version": "0.11.4"
+    },
+    "matplotlib": {
+      "ok": true,
+      "version": "3.10.7"
+    },
+    "numpy": {
+      "ok": true,
+      "version": "1.26.4"
+    },
+    "pandas": {
+      "ok": true,
+      "version": "2.3.3"
+    },
+    "scanpy": {
+      "ok": true,
+      "version": "1.11.5"
+    },
+    "scipy": {
+      "ok": true,
+      "version": "1.15.3"
+    },
+    "seaborn": {
+      "ok": true,
+      "version": "0.13.2"
+    },
+    "sklearn": {
+      "ok": true,
+      "version": "1.7.2"
+    },
+    "stlearn": {
+      "ok": true,
+      "version": "1.1.1"
+    }
+  },
+  "python": "3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:40:32) [GCC 12.3.0]"
+}
+source_pip_check_rc: 0
+No broken requirements found.
+target_pip_check_rc: 0
+No broken requirements found.
+pip_check_matches_source: True
+migration_check: PASS

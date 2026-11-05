@@ -1,0 +1,103 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting ipykernel==6.29.5
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/94/5c/368ae6c01c7628438358e6d337c19b05425727fbb221d2a3c4303c372f42/ipykernel-6.29.5-py3-none-any.whl (117 kB)
+Collecting comm>=0.1.1 (from ipykernel==6.29.5)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/60/97/891a0971e1e4a8c5d2b20bbe0e524dc04548d2307fee33cdeba148fd4fc7/comm-0.2.3-py3-none-any.whl (7.3 kB)
+Requirement already satisfied: debugpy>=1.6.5 in /home/lcpyspa/.local/lib/python3.10/site-packages (from ipykernel==6.29.5) (1.8.22)
+Collecting ipython>=7.23.1 (from ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/c0/56/4cc7fc9e9e3f38fd324f24f8afe0ad8bb5fa41283f37f1aaf9de0612c968/ipython-8.39.0-py3-none-any.whl (831 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 831.8/831.8 kB 2.3 MB/s  0:00:00
+Requirement already satisfied: jupyter-client>=6.1.12 in /home/lcpyspa/.local/lib/python3.10/site-packages (from ipykernel==6.29.5) (8.10.0)
+Requirement already satisfied: jupyter-core!=5.0.*,>=4.12 in /home/lcpyspa/.local/lib/python3.10/site-packages (from ipykernel==6.29.5) (5.9.1)
+Collecting matplotlib-inline>=0.1 (from ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/41/09/5b161152e2d90f7b87f781c2e1267494aef9c32498df793f73ad0a0a494a/matplotlib_inline-0.2.2-py3-none-any.whl (9.5 kB)
+Collecting nest-asyncio (from ipykernel==6.29.5)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/a0/c4/c2971a3ba4c6103a3d10c4b0f24f461ddc027f0f09763220cf35ca1401b3/nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Requirement already satisfied: packaging in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (25.0)
+Collecting psutil (from ipykernel==6.29.5)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/b5/70/5d8df3b09e25bce090399cf48e452d25c935ab72dad19406c77f4e828045/psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Requirement already satisfied: pyzmq>=24 in /home/lcpyspa/.local/lib/python3.10/site-packages (from ipykernel==6.29.5) (27.2.0)
+Requirement already satisfied: tornado>=6.1 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (6.5.2)
+Collecting traitlets>=5.4.0 (from ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ad/66/0d785f0bc5e4315a96c989bb476d0fc07ea4f85132550c7b156ca2035d52/traitlets-5.16.1-py3-none-any.whl (86 kB)
+Collecting decorator (from ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/05/7f/798705f5296a58ca505d600456748d1be48078eac8a7050d8a98bc9edb89/decorator-5.3.1-py3-none-any.whl (10 kB)
+Requirement already satisfied: exceptiongroup in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (1.3.0)
+Collecting jedi>=0.16 (from ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/be/c7/71eb0d51cdcbb63b857c931aa4e9218b078b5d9f8ecd383b234f28fe7b0f/jedi-0.20.1-py2.py3-none-any.whl (4.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 4.1 MB/s  0:00:01
+Collecting pexpect>4.3 (from ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/9e/c3/059298687310d527a58bb01f3b1965787ee3b40dce76752eda8b44e9a2c5/pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/54/6f/84908cad2d6aa5144abcf7b42709fe4fdb459bc640ec7ac5786e7693dabc/prompt_toolkit-3.0.53-py3-none-any.whl (392 kB)
+Requirement already satisfied: pygments>=2.4.0 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (2.19.2)
+Collecting stack_data (from ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl (24 kB)
+Requirement already satisfied: typing_extensions>=4.6 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (4.15.0)
+Collecting wcwidth>=0.1.4 (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/fa/e8/0485850748dfdba9443f4151c7b2442cfa4987ba6cd871038eb5d6b8eca9/wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (785 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 785.9/785.9 kB 876.4 kB/s  0:00:00
+Collecting parso<0.9.0,>=0.8.7 (from jedi>=0.16->ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/99/5d/8268b644392ee874ee82a635cd0df1773de230bde356c38de28e298392cc/parso-0.8.7-py2.py3-none-any.whl (107 kB)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from jupyter-client>=6.1.12->ipykernel==6.29.5) (2.9.0.post0)
+Collecting platformdirs>=2.5 (from jupyter-core!=5.0.*,>=4.12->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f4/ba/223e00b885e960edd5d4b4d178c88acce019bd5b83786093681b8c393492/platformdirs-4.12.4-py3-none-any.whl (32 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Requirement already satisfied: six>=1.5 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from python-dateutil>=2.8.2->jupyter-client>=6.1.12->ipykernel==6.29.5) (1.17.0)
+Collecting executing>=1.2.0 (from stack_data->ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/4d/dd/8bc67e7d5ffc1d88aa5af511189dfb76dc4e1e5b808fab186146ef2663e5/executing-2.3.0-py3-none-any.whl (29 kB)
+Collecting asttokens>=2.1.0 (from stack_data->ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/d4/2b/04b8a15f3a1c77bc79ddf5c73875327f34b4fa75982df2b76e45e402d364/asttokens-3.0.2-py3-none-any.whl (28 kB)
+Collecting pure-eval (from stack_data->ipython>=7.23.1->ipykernel==6.29.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/6d/18/83376915176eb058cb86470eb7396388a13350b09a8f233a79303bbcbc5b/pure_eval-0.2.4-py3-none-any.whl (11 kB)
+Installing collected packages: pure-eval, ptyprocess, wcwidth, traitlets, psutil, platformdirs, pexpect, parso, nest-asyncio, executing, decorator, comm, asttokens, stack_data, prompt_toolkit, matplotlib-inline, jedi, ipython, ipykernel
+  Attempting uninstall: ipykernel
+    Found existing installation: ipykernel 7.3.0
+    Uninstalling ipykernel-7.3.0:
+      Successfully uninstalled ipykernel-7.3.0
+
+Successfully installed asttokens-3.0.2 comm-0.2.3 decorator-5.3.1 executing-2.3.0 ipykernel-6.29.5 ipython-8.39.0 jedi-0.20.1 matplotlib-inline-0.2.2 nest-asyncio-1.6.0 parso-0.8.7 pexpect-4.9.0 platformdirs-4.12.4 prompt_toolkit-3.0.53 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.4 stack_data-0.6.3 traitlets-5.16.1 wcwidth-0.9.4
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Requirement already satisfied: ipykernel==6.29.5 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (6.29.5)
+Requirement already satisfied: comm>=0.1.1 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (0.2.3)
+Collecting debugpy>=1.6.5 (from ipykernel==6.29.5)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/56/3d/c7dc9f35bc9e22cdb53679f844bee40fd5cff871862f60595869a433400d/debugpy-1.8.22-py2.py3-none-any.whl (5.4 MB)
+Requirement already satisfied: ipython>=7.23.1 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (8.39.0)
+Collecting jupyter-client>=6.1.12 (from ipykernel==6.29.5)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/0f/88/7c548de1f6c2ade7c931a3282da73f9274fa6a1531091be682f89c85efb9/jupyter_client-8.10.0-py3-none-any.whl (110 kB)
+Collecting jupyter-core!=5.0.*,>=4.12 (from ipykernel==6.29.5)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/e7/e7/80988e32bf6f73919a113473a604f5a8f09094de312b9d52b79c2df7612b/jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+Requirement already satisfied: matplotlib-inline>=0.1 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (0.2.2)
+Requirement already satisfied: nest-asyncio in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (1.6.0)
+Requirement already satisfied: packaging in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (25.0)
+Requirement already satisfied: psutil in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (7.2.2)
+Collecting pyzmq>=24 (from ipykernel==6.29.5)
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/3b/fd/aee8c87f4854a012e232a6557b1167b6cd207506f59f378954b2d8bb6ed1/pyzmq-27.2.0-cp310-cp310-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (888 kB)
+Requirement already satisfied: tornado>=6.1 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (6.5.2)
+Requirement already satisfied: traitlets>=5.4.0 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipykernel==6.29.5) (5.16.1)
+Requirement already satisfied: decorator in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (5.3.1)
+Requirement already satisfied: exceptiongroup in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (1.3.0)
+Requirement already satisfied: jedi>=0.16 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (0.20.1)
+Requirement already satisfied: pexpect>4.3 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (3.0.53)
+Requirement already satisfied: pygments>=2.4.0 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (2.19.2)
+Requirement already satisfied: stack_data in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (0.6.3)
+Requirement already satisfied: typing_extensions>=4.6 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from ipython>=7.23.1->ipykernel==6.29.5) (4.15.0)
+Requirement already satisfied: wcwidth>=0.1.4 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel==6.29.5) (0.9.4)
+Requirement already satisfied: parso<0.9.0,>=0.8.7 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from jedi>=0.16->ipython>=7.23.1->ipykernel==6.29.5) (0.8.7)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from jupyter-client>=6.1.12->ipykernel==6.29.5) (2.9.0.post0)
+Requirement already satisfied: platformdirs>=2.5 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from jupyter-core!=5.0.*,>=4.12->ipykernel==6.29.5) (4.12.4)
+Requirement already satisfied: ptyprocess>=0.5 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from pexpect>4.3->ipython>=7.23.1->ipykernel==6.29.5) (0.7.0)
+Requirement already satisfied: six>=1.5 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from python-dateutil>=2.8.2->jupyter-client>=6.1.12->ipykernel==6.29.5) (1.17.0)
+Requirement already satisfied: executing>=1.2.0 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel==6.29.5) (2.3.0)
+Requirement already satisfied: asttokens>=2.1.0 in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel==6.29.5) (3.0.2)
+Requirement already satisfied: pure-eval in /home/lcpyspa/miniconda3/envs/stlearn/lib/python3.10/site-packages (from stack_data->ipython>=7.23.1->ipykernel==6.29.5) (0.2.4)
+Installing collected packages: pyzmq, jupyter-core, debugpy, jupyter-client
+
+Successfully installed debugpy-1.8.22 jupyter-client-8.10.0 jupyter-core-5.9.1 pyzmq-27.2.0
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting ipykernel==7.3.0
+  Using cached https://pypi.tuna.tsinghua.edu.cn/packages/3d/02/77b271f5dc58bfbc0b577c877b2365d1ffea2afe66a80c13f2312820348c/ipykernel-7.3.0-py3-none-any.whl (120 kB)
+Installing collected packages: ipykernel
+Successfully installed ipykernel-7.3.0

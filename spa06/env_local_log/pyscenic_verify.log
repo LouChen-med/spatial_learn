@@ -1,0 +1,67 @@
+ENV pyscenic
+source: /software/miniconda3/envs/pyscenic
+target: /home/lcpyspa/miniconda3/envs/pyscenic
+source_package_count: 105
+target_package_count: 105
+missing_package_count: 0
+extra_package_count: 0
+channel_metadata_mismatch_count: 66
+source_pip_package_count: 114
+target_pip_package_count: 114
+pip_missing_packages: []
+pip_extra_packages: []
+pip_version_differences: []
+package_set_match: True
+python_check_rc: 0
+{
+  "executable": "/home/lcpyspa/miniconda3/envs/pyscenic/bin/python",
+  "imports": {
+    "anndata": {
+      "ok": true,
+      "version": "0.8.0"
+    },
+    "arboreto": {
+      "ok": true,
+      "version": ""
+    },
+    "ctxcore": {
+      "ok": true,
+      "version": "0.2.0"
+    },
+    "matplotlib": {
+      "ok": true,
+      "version": "3.5.2"
+    },
+    "numpy": {
+      "ok": true,
+      "version": "1.21.6"
+    },
+    "pandas": {
+      "ok": true,
+      "version": "1.3.5"
+    },
+    "pyscenic": {
+      "ok": true,
+      "version": "0.12.1"
+    },
+    "scanpy": {
+      "ok": true,
+      "version": "1.9.3"
+    },
+    "scipy": {
+      "ok": true,
+      "version": "1.7.3"
+    },
+    "sklearn": {
+      "ok": true,
+      "version": "1.0.2"
+    }
+  },
+  "python": "3.7.16 (default, Jan 17 2023, 22:20:44) \n[GCC 11.2.0]"
+}
+source_pip_check_rc: 0
+No broken requirements found.
+target_pip_check_rc: 0
+No broken requirements found.
+pip_check_matches_source: True
+migration_check: PASS

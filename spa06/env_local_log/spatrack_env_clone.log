@@ -1,0 +1,15 @@
+2 channel Terms of Service accepted
+Source:      /software/miniconda3/envs/spatrack_env
+Destination: /home/lcpyspa/miniconda3/envs/spatrack_env
+Packages: 100
+Files: 41501
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libdeflate-1.10-h7f98852_0.tar.bz2
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+

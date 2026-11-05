@@ -1,0 +1,70 @@
+ENV spatrack_env
+source: /software/miniconda3/envs/spatrack_env
+target: /home/lcpyspa/miniconda3/envs/spatrack_env
+source_package_count: 100
+target_package_count: 100
+missing_package_count: 0
+extra_package_count: 0
+channel_metadata_mismatch_count: 32
+source_pip_package_count: 144
+target_pip_package_count: 144
+pip_missing_packages: []
+pip_extra_packages: []
+pip_version_differences: []
+package_set_match: True
+python_check_rc: 0
+/home/lcpyspa/miniconda3/envs/spatrack_env/lib/python3.9/site-packages/scipy/__init__.py:155: UserWarning: A NumPy version >=1.18.5 and <1.26.0 is required for this version of SciPy (detected version 1.26.4
+  warnings.warn(f"A NumPy version >={np_minversion} and <{np_maxversion}"
+OMP: Info #277: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+/home/lcpyspa/miniconda3/envs/spatrack_env/lib/python3.9/site-packages/spaghetti/network.py:40: FutureWarning:
+
+The next major release of pysal/spaghetti (2.0.0) will drop support for all ``libpysal.cg`` geometries. This change is a first step in refactoring ``spaghetti`` that is expected to result in dramatically reduced runtimes for network instantiation and operations. Users currently requiring network and point pattern input as ``libpysal.cg`` geometries should prepare for this simply by converting to ``shapely`` geometries.
+
+{
+  "executable": "/home/lcpyspa/miniconda3/envs/spatrack_env/bin/python",
+  "imports": {
+    "anndata": {
+      "ok": true,
+      "version": "0.10.9"
+    },
+    "matplotlib": {
+      "ok": true,
+      "version": "3.9.4"
+    },
+    "numpy": {
+      "ok": true,
+      "version": "1.26.4"
+    },
+    "pandas": {
+      "ok": true,
+      "version": "1.4.3"
+    },
+    "scanpy": {
+      "ok": true,
+      "version": "1.9.8"
+    },
+    "scipy": {
+      "ok": true,
+      "version": "1.9.3"
+    },
+    "sklearn": {
+      "ok": true,
+      "version": "1.6.1"
+    },
+    "spaTrack": {
+      "ok": true,
+      "version": "0.1.1"
+    },
+    "torch": {
+      "ok": true,
+      "version": "2.8.0+cu128"
+    }
+  },
+  "python": "3.9.20 (main, Oct  3 2024, 07:27:41) \n[GCC 11.2.0]"
+}
+source_pip_check_rc: 0
+No broken requirements found.
+target_pip_check_rc: 0
+No broken requirements found.
+pip_check_matches_source: True
+migration_check: PASS

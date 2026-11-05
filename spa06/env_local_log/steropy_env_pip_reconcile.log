@@ -1,0 +1,23 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting imagecodecs==2023.3.16
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/ba/9a/85f1803173adb1501729d3f040a71aae08621c71699243fff20d83347270/imagecodecs-2023.3.16-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.3/36.3 MB 11.6 MB/s eta 0:00:00
+Collecting pandas==1.5.3
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/54/a0/c62d63c5c69be9aae07836e4d7e25e7a6f5590be3d8f2d53f43eeec5c475/pandas-1.5.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 8.1 MB/s eta 0:00:00
+Collecting seaborn==0.13.2
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl (294 kB)
+Installing collected packages: seaborn, pandas, imagecodecs
+  Attempting uninstall: seaborn
+    Found existing installation: seaborn 0.12.2
+    Uninstalling seaborn-0.12.2:
+      Successfully uninstalled seaborn-0.12.2
+  Attempting uninstall: pandas
+    Found existing installation: pandas 1.4.4
+    Uninstalling pandas-1.4.4:
+      Successfully uninstalled pandas-1.4.4
+  Attempting uninstall: imagecodecs
+    Found existing installation: imagecodecs 2023.1.23
+    Uninstalling imagecodecs-2023.1.23:
+      Successfully uninstalled imagecodecs-2023.1.23
+Successfully installed imagecodecs-2023.3.16 pandas-1.5.3 seaborn-0.13.2

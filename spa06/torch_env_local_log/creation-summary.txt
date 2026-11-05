@@ -1,0 +1,55 @@
+torch_env_local creation summary
+================================
+
+Created: 2026-11-01
+
+Source environment:
+  /software/miniconda3/envs/torch_env
+
+Target environment:
+  /home/lcpyspa/miniconda3/envs/torch_env_local
+
+Target Conda:
+  /home/lcpyspa/miniconda3/condabin/conda
+
+Recorded inputs:
+  source-conda-explicit.txt
+  source-conda-explicit-no-findpython.txt
+  source-pypi-packages.txt
+  create-20261101.log
+  verify-20261101.log
+
+Procedure:
+  1. Exported the exact source Conda package URLs.
+  2. Set http_proxy and https_proxy to http://172.19.0.255:3333
+     and ssl_verify to false in the local Conda configuration.
+  3. Excluded conda-forge findpython 0.7.0 from the Conda transaction
+     because local Conda 26.5.3 rejects its quoted entry-point metadata.
+  4. Created torch_env_local from the remaining exact package URLs.
+  5. Installed findpython 0.7.0 and the source PyPI versions with pip;
+     findpython was installed without dependencies, then ipykernel was
+     installed with dependencies directly into torch_env_local.
+  6. Registered the Jupyter kernelspec Python (torch_env_local).
+
+Verification:
+  Python: 3.10.19
+  torch: 2.5.1
+  scanpy: 1.11.5
+  squidpy: 1.6.5
+  scib: 1.1.7
+  scvi: 1.3.3
+  anndata: 0.11.4
+  spatialdata: 0.5.0
+  ipykernel: 7.3.0
+  Conda package version/build differences: none
+  Required PyPI version mismatches: 0
+  pip check: no broken requirements
+  Jupyter kernel smoke test: passed
+
+Use:
+  source /home/lcpyspa/miniconda3/etc/profile.d/conda.sh
+  conda activate torch_env_local
+
+VS Code:
+  Interpreter: /home/lcpyspa/miniconda3/envs/torch_env_local/bin/python
+  Kernel: Python (torch_env_local)

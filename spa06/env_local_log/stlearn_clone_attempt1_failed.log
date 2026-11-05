@@ -1,0 +1,61 @@
+2 channel Terms of Service accepted
+Source:      /software/miniconda3/envs/stlearn
+Destination: /home/lcpyspa/miniconda3/envs/stlearn
+Packages: 245
+Files: 47699
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/noarch/libgcc-devel_linux-64-15.2.0-h73f6952_107.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='conda.anaconda.org', port=443): Read timed out. (read timeout=9.15)")': /conda-forge/linux-64/libdeflate-1.24-h86f0d12_0.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/noarch/libgcc-devel_linux-64-15.2.0-h73f6952_107.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libdeflate-1.24-h86f0d12_0.conda
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/noarch/libgcc-devel_linux-64-15.2.0-h73f6952_107.conda
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libdeflate-1.24-h86f0d12_0.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/r-base64enc-0.1_3-r44h54b55ab_1008.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/r-base64enc-0.1_3-r44h54b55ab_1008.conda
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/r-base64enc-0.1_3-r44h54b55ab_1008.conda
+
+
+CondaSSLError: Encountered an SSL error. Most likely a certificate verification issue.
+
+Exception: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+CondaSSLError: Encountered an SSL error. Most likely a certificate verification issue.
+
+Exception: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2 (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+CondaSSLError: Encountered an SSL error. Most likely a certificate verification issue.
+
+Exception: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+CondaSSLError: Encountered an SSL error. Most likely a certificate verification issue.
+
+Exception: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/noarch/libgcc-devel_linux-64-15.2.0-h73f6952_107.conda (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+CondaSSLError: Encountered an SSL error. Most likely a certificate verification issue.
+
+Exception: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/linux-64/libdeflate-1.24-h86f0d12_0.conda (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+CondaSSLError: Encountered an SSL error. Most likely a certificate verification issue.
+
+Exception: HTTPSConnectionPool(host='conda.anaconda.org', port=443): Max retries exceeded with url: /conda-forge/linux-64/r-base64enc-0.1_3-r44h54b55ab_1008.conda (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')))
+
+

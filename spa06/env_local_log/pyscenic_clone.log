@@ -1,0 +1,33 @@
+2 channel Terms of Service accepted
+Source:      /software/miniconda3/envs/pyscenic
+Destination: /home/lcpyspa/miniconda3/envs/pyscenic
+Packages: 105
+Files: 13813
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libgomp-15.1.0-h767d61c_5.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/noarch/ca-certificates-2025.7.14-hbd8a1cb_0.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/noarch/ca-certificates-2025.7.14-hbd8a1cb_0.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/libffi-3.4.4-h6a678d5_1.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/_libgcc_mutex-0.1-main.tar.bz2
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/libffi-3.4.4-h6a678d5_1.conda
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/_openmp_mutex-5.1-1_gnu.conda
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+

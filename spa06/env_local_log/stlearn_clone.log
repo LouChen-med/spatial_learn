@@ -1,0 +1,13 @@
+2 channel Terms of Service accepted
+Source:      /software/miniconda3/envs/stlearn
+Destination: /home/lcpyspa/miniconda3/envs/stlearn
+Packages: 245
+Files: 47699
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+

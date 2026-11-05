@@ -1,0 +1,239 @@
+Retrying (Retry(total=9, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/terms.json
+
+Retrying (Retry(total=8, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/terms.json
+
+Retrying (Retry(total=7, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/terms.json
+
+/home/lcpyspa/miniconda3/lib/python3.14/site-packages/urllib3/connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host '172.19.0.255'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/home/lcpyspa/miniconda3/lib/python3.14/site-packages/urllib3/connectionpool.py:1110: InsecureRequestWarning: Unverified HTTPS request is being made to host '172.19.0.255'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+2 channel Terms of Service accepted
+Retrying (Retry(total=9, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/noarch/libgcc-devel_linux-64-15.2.0-h73f6952_107.conda
+
+Retrying (Retry(total=9, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libdeflate-1.24-h86f0d12_0.conda
+
+Retrying (Retry(total=9, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda
+
+Retrying (Retry(total=8, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda
+
+Retrying (Retry(total=7, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libffi-3.4.6-h2dba641_1.conda
+
+Source:      /software/miniconda3/envs/stlearn
+Destination: /home/lcpyspa/miniconda3/envs/stlearn
+Packages: 245
+Files: 47699
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+ERROR conda.core.link:_execute(1014): An error occurred while installing package 'bioconda::bioconductor-genomeinfodbdata-1.2.13-r44hdfd78af_0'.
+Rolling back transaction: ...working... done
+class: LinkError
+message:
+post-link script failed for package bioconda::bioconductor-genomeinfodbdata-1.2.13-r44hdfd78af_0
+location of failed script: /home/lcpyspa/miniconda3/envs/stlearn/bin/.bioconductor-genomeinfodbdata-post-link.sh
+==> script messages <==
+<None>
+==> script output <==
+stdout: 
+stderr: ++ dirname -- /home/lcpyspa/miniconda3/envs/stlearn/bin/installBiocDataPackage.sh
++ SCRIPT_DIR=/home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages
++ json=/home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
+++ yq '."genomeinfodbdata-1.2.13".fn' /home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
++ FN='"GenomeInfoDbData_1.2.13.tar.gz"'
++ IFS=
++ read -r value
+++ yq '."genomeinfodbdata-1.2.13".urls[]' /home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
++ URLS+=($value)
++ IFS=
++ read -r value
++ URLS+=($value)
++ IFS=
++ read -r value
++ URLS+=($value)
++ IFS=
++ read -r value
+++ yq '."genomeinfodbdata-1.2.13".md5' /home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
++ MD5='"8798e58b89d84d9fa6a85f2191704668"'
++ STAGING=/home/lcpyspa/miniconda3/envs/stlearn/share/genomeinfodbdata-1.2.13
++ mkdir -p /home/lcpyspa/miniconda3/envs/stlearn/share/genomeinfodbdata-1.2.13
++ TARBALL='/home/lcpyspa/miniconda3/envs/stlearn/share/genomeinfodbdata-1.2.13/"GenomeInfoDbData_1.2.13.tar.gz"'
++ SUCCESS=0
++ for URL in ${URLS[@]}
+++ echo '"https://bioconductor.org/packages/3.20/data/annotation/src/contrib/GenomeInfoDbData_1.2.13.tar.gz"'
+++ tr -d '"'
++ URL=https://bioconductor.org/packages/3.20/data/annotation/src/contrib/GenomeInfoDbData_1.2.13.tar.gz
+++ tr -d '"'
+++ echo '"8798e58b89d84d9fa6a85f2191704668"'
++ MD5=8798e58b89d84d9fa6a85f2191704668
++ curl -L https://bioconductor.org/packages/3.20/data/annotation/src/contrib/GenomeInfoDbData_1.2.13.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+curl: (35) TLS connect error: error:0A000126:SSL routines::unexpected eof while reading
+
+return code: 35
+
+kwargs:
+{}
+
+class: LinkError
+message:
+post-link script failed for package bioconda::bioconductor-genomeinfodbdata-1.2.13-r44hdfd78af_0
+location of failed script: /home/lcpyspa/miniconda3/envs/stlearn/bin/.bioconductor-genomeinfodbdata-post-link.sh
+==> script messages <==
+<None>
+==> script output <==
+stdout: 
+stderr: ++ dirname -- /home/lcpyspa/miniconda3/envs/stlearn/bin/installBiocDataPackage.sh
++ SCRIPT_DIR=/home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages
++ json=/home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
+++ yq '."genomeinfodbdata-1.2.13".fn' /home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
++ FN='"GenomeInfoDbData_1.2.13.tar.gz"'
++ IFS=
++ read -r value
+++ yq '."genomeinfodbdata-1.2.13".urls[]' /home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
++ URLS+=($value)
++ IFS=
++ read -r value
++ URLS+=($value)
++ IFS=
++ read -r value
++ URLS+=($value)
++ IFS=
++ read -r value
+++ yq '."genomeinfodbdata-1.2.13".md5' /home/lcpyspa/miniconda3/envs/stlearn/bin/../share/bioconductor-data-packages/dataURLs.json
++ MD5='"8798e58b89d84d9fa6a85f2191704668"'
++ STAGING=/home/lcpyspa/miniconda3/envs/stlearn/share/genomeinfodbdata-1.2.13
++ mkdir -p /home/lcpyspa/miniconda3/envs/stlearn/share/genomeinfodbdata-1.2.13
++ TARBALL='/home/lcpyspa/miniconda3/envs/stlearn/share/genomeinfodbdata-1.2.13/"GenomeInfoDbData_1.2.13.tar.gz"'
++ SUCCESS=0
++ for URL in ${URLS[@]}
+++ echo '"https://bioconductor.org/packages/3.20/data/annotation/src/contrib/GenomeInfoDbData_1.2.13.tar.gz"'
+++ tr -d '"'
++ URL=https://bioconductor.org/packages/3.20/data/annotation/src/contrib/GenomeInfoDbData_1.2.13.tar.gz
+++ tr -d '"'
+++ echo '"8798e58b89d84d9fa6a85f2191704668"'
++ MD5=8798e58b89d84d9fa6a85f2191704668
++ curl -L https://bioconductor.org/packages/3.20/data/annotation/src/contrib/GenomeInfoDbData_1.2.13.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0
+curl: (35) TLS connect error: error:0A000126:SSL routines::unexpected eof while reading
+
+return code: 35
+
+kwargs:
+{}
+
+Traceback (most recent call last):
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/exception_handler.py", line 30, in __call__
+    return func(*args, **kwargs)
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/cli/main.py", line 53, in main_subshell
+    exit_code = do_call(args, parser)
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/cli/conda_argparse.py", line 190, in do_call
+    result = getattr(module, func_name)(args, parser)
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/notices/core.py", line 151, in wrapper
+    return func(*args, **kwargs)
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/cli/main_create.py", line 213, in execute
+    install_clone(args, parser)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/cli/install.py", line 425, in install_clone
+    clone(
+    ~~~~~^
+        args.clone,
+        ^^^^^^^^^^^
+    ...<3 lines>...
+        index_args=index_args,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/cli/install.py", line 117, in clone
+    actions, untracked_files = clone_env(
+                               ~~~~~~~~~^
+        src_prefix, dst_prefix, verbose=not json, quiet=quiet, index_args=index_args
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/misc.py", line 365, in clone_env
+    actions = explicit(
+        urls,
+    ...<3 lines>...
+        force_extract=False,
+    )
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/misc.py", line 132, in explicit
+    install_explicit_packages(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        package_cache_records=package_cache_records,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix=prefix,
+        ^^^^^^^^^^^^^^
+        requested_specs=requested_specs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/misc.py", line 180, in install_explicit_packages
+    txn.execute()
+    ~~~~~~~~~~~^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/core/link.py", line 374, in execute
+    self._execute(
+    ~~~~~~~~~~~~~^
+        tuple(chain(*chain(*zip(*self.prefix_action_groups.values()))))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/core/link.py", line 1030, in _execute
+    raise CondaMultiError(
+    ...<8 lines>...
+    )
+conda.CondaMultiError: <exception str() failed>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lcpyspa/miniconda3/bin/conda", line 13, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/cli/main.py", line 112, in main
+    return conda_exception_handler(main, *args, **kwargs)
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/exception_handler.py", line 435, in conda_exception_handler
+    return_value = exception_handler(func, *args, **kwargs)
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/exception_handler.py", line 33, in __call__
+    return self.handle_exception(exc_val, exc_tb)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/exception_handler.py", line 84, in handle_exception
+    return self.handle_application_exception(exc_val, exc_tb)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/exception_handler.py", line 102, in handle_application_exception
+    self._print_conda_exception(exc_val, exc_tb)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/exception_handler.py", line 112, in _print_conda_exception
+    print_conda_exception(exc_val, exc_tb)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/exceptions.py", line 1595, in print_conda_exception
+    stderr(f"\n{exc_val!r}\n")
+               ^^^^^^^^^^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/__init__.py", line 129, in __repr__
+    errs.append(e.__repr__())
+                ~~~~~~~~~~^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/__init__.py", line 83, in __repr__
+    return f"{self.__class__.__name__}: {self}"
+                                        ^^^^^^
+  File "/home/lcpyspa/miniconda3/lib/python3.14/site-packages/conda/__init__.py", line 87, in __str__
+    return str(self.message) % self._kwargs
+           ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+ValueError: unsupported format character 'T' (0x54) at index 1915

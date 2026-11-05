@@ -1,0 +1,69 @@
+# torch_env_local verification
+timestamp=2026-11-01T21:36:15+08:00
+
+## interpreter
+executable= /home/lcpyspa/miniconda3/envs/torch_env_local/bin/python
+prefix= /home/lcpyspa/miniconda3/envs/torch_env_local
+user_site_enabled= False
+
+## conda package comparison
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "<stdin>", line 7, in conda_map
+  File "<stdin>", line 5, in records
+  File "/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/home/lcpyspa/miniconda3/condabin/conda', 'list', '-n', 'torch_env', '--json']' returned non-zero exit status 1.
+
+## required PyPI versions
+required= 50 mismatches= 0
+
+## key imports
+<stdin>:5: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/dask/dataframe/__init__.py:31: FutureWarning: The legacy Dask DataFrame implementation is deprecated and will be removed in a future version. Set the configuration option `dataframe.query-planning` to `True` or None to enable the new Dask Dataframe implementation and silence this warning.
+  warnings.warn(
+/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/xarray_schema/__init__.py:1: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound, get_distribution
+/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/anndata/utils.py:434: FutureWarning: Importing read_text from `anndata` is deprecated. Import anndata.io.read_text instead.
+  warnings.warn(msg, FutureWarning)
+torch 2.5.1 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/torch/__init__.py
+scanpy 1.11.5 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/scanpy/__init__.py
+squidpy 1.6.5 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/squidpy/__init__.py
+scib 1.1.7 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/scib/__init__.py
+scvi 1.3.3 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/scvi/__init__.py
+anndata 0.11.4 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/anndata/__init__.py
+spatialdata 0.5.0 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/spatialdata/__init__.py
+ipykernel 7.3.0 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/ipykernel/__init__.py
+findpython 0.7.0 /home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/findpython/__init__.py
+/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/tempfile.py:869: ResourceWarning: Implicitly cleaning up <TemporaryDirectory '/tmp/tmpmz01jqp5'>
+  _warnings.warn(warn_message, ResourceWarning)
+
+## pip check
+No broken requirements found.
+
+## size/disk
+8.5G	/home/lcpyspa/miniconda3/envs/torch_env_local
+/dev/rbd95      366G  234G  114G  68% /home
+
+# 2026-11-01T21:37:37+08:00 corrected Conda package comparison by prefix
+source_conda= 423 target_conda= 422
+missing_in_target= ['findpython']
+extra_in_target= []
+version_build_differences=
+
+## register and smoke-test Jupyter kernelspec
+timestamp=2026-11-01T21:37:55+08:00
+Installed kernelspec torch_env_local in /home/lcpyspa/miniconda3/envs/torch_env_local/share/jupyter/kernels/torch_env_local
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+/home/lcpyspa/miniconda3/envs/torch_env_local/bin/python
+torch 2.5.1
+scanpy 1.11.5
+/tmp/ipykernel_2223870/3950308991.py:1: FutureWarning: `__version__` is deprecated, use `importlib.metadata.version('scanpy')` instead
+  import sys, torch, scanpy; print(sys.executable); print('torch', torch.__version__); print('scanpy', scanpy.__version__)
+kernel_smoke_test=ok
+Exception ignored in: <function KernelClient.__del__ at 0x7f7db00ab0a0>
+Traceback (most recent call last):
+  File "/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/jupyter_client/client.py", line 123, in __del__
+  File "/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/traitlets/traitlets.py", line 687, in __get__
+  File "/home/lcpyspa/miniconda3/envs/torch_env_local/lib/python3.10/site-packages/traitlets/traitlets.py", line 666, in get
+TypeError: 'NoneType' object is not callable

@@ -1,0 +1,31 @@
+2 channel Terms of Service accepted
+Source:      /software/miniconda3/envs/steropy_env
+Destination: /home/lcpyspa/miniconda3/envs/steropy_env
+Packages: 283
+Files: 9321
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/ld_impl_linux-64-2.44-h153f514_2.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/aws-c-common-0.8.23-hd590300_0.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libutf8proc-2.8.0-hf23e847_1.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libnuma-2.0.18-hb9d3cd8_3.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/zfp-1.0.1-h909a3a2_3.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /conda-forge/linux-64/libutf8proc-2.8.0-hf23e847_1.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/libcrc32c-1.1.2-h6a678d5_0.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/linux-64/libcrc32c-1.1.2-h6a678d5_0.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)')': /pkgs/main/noarch/asciitree-0.3.3-py_2.conda
+
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+

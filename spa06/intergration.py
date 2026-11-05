@@ -1,6 +1,10 @@
 # %% [markdown]
 # # 空间转录组多样本整合
 
+
+
+
+
 # %%
 from datetime import date
 print("Author: Biomamba")
@@ -251,7 +255,8 @@ print(adata.var['highly_variable'].value_counts())
 adata=adata[:,adata.var['highly_variable']==True]
 
 # %%
-adata
+adata.uns["log1p"]
+
 
 # %%
 # 数据缩放 (Scaling)
