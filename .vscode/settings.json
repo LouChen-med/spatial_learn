@@ -1,0 +1,25 @@
+{
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.indexing": true,
+  "python.analysis.userFileIndexFollowSymlinkedFolders": false,
+  "python.analysis.exclude": [
+    "**/.ipynb_checkpoints/**",
+    "**/tmp/**",
+    "**/spa04/Visium_HD_Mouse_Brain/**",
+    "**/spa04/Visium_HD_Mouse_Brain_fastqs/**",
+    "**/spa04/Visium_HD_Mouse_Brain_loupe/**",
+    "**/spa04/out_10x/**",
+    "**/spa05/data/**"
+  ],
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.ipynb_checkpoints/**": true,
+    "**/tmp/**": true,
+    "**/spa04/Visium_HD_Mouse_Brain/**": true,
+    "**/spa04/Visium_HD_Mouse_Brain_fastqs/**": true,
+    "**/spa04/Visium_HD_Mouse_Brain_loupe/**": true,
+    "**/spa04/out_10x/**": true,
+    "**/spa05/data/**": true
+  }
+}
