@@ -7,3 +7,10 @@ spa04/refdata-gex-mm10-2020-A.tar.gz
 spa04/Visium_HD_Mouse_Brain_loupe
 spa05/data
 tmp
+09_neighborhood_analysis
+10_spatial_communication
+11_trajectory
+12_CNV
+13_reprodution
+07_co_expression
+spa07/adata_labeled.h5ad

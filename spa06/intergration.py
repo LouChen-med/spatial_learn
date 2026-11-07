@@ -430,7 +430,9 @@ sce.pp.harmony_integrate(adata, 'library_id')
 # %%
 # 检查harmony去批次后的结果
 adata
-
+# %%
+# 检查harmony去批次后的结果
+adata.obsm['X_pca_harmony']
 # %% [markdown]
 # #### 重新聚类
 
