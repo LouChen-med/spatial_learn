@@ -152,19 +152,20 @@ col_attrs = {
 # 由于 adata.X 通常是 (细胞 x 基因) 格式，因此需要转置以符合 Loom 的 (基因 x 细胞) 标准。
 lp.create(
     filename='/home/lcpyspa/spa/spa07/scenic.loom', 
-    matrix=adata.X.transpose(), # 核心：将 (细胞 x 基因) 矩阵转置为 (基因 x 细胞)
+    layers=adata.X.transpose(), # 核心：将 (细胞 x 基因) 矩阵转置为 (基因 x 细胞)
     row_attrs=row_attrs,        # 基因属性
     col_attrs=col_attrs         # 细胞/Spot属性
 )
 
-# 最终：/data/07_co_expression/scenic_st/scenic.loom 文件已创建，可用于 SCENIC 等下游分析
+# 最终：/home/lcpyspa/spa/07_co_expression/scenic_st/scenic.loom 文件已创建，可用于 SCENIC 等下游分析
 
 # %%
 # --- 转录因子列表文件路径定义 ---
 
-# f_tfs = "/data/07_co_expression/scenic_st/allTFs_hg38.txt"  # human (人类基因组，路径被注释)
-# f_tfs = "/data/07_co_expression/scenic_st/allTFs_dmel.txt"  # drosophila (果蝇基因组，路径被注释)
+# f_tfs = "/home/lcpyspa/spa/07_co_expression/scenic_st/allTFs_hg38.txt"  # human (人类基因组，路径被注释)
+# f_tfs = "/home/lcpyspa/spa/07_co_expression/scenic_st/allTFs_dmel.txt"  # drosophila (果蝇基因组，路径被注释)
 
+# data source ：https://resources.aertslab.org/
 f_tfs = "/home/lcpyspa/spa/07_co_expression/scenic_st/allTFs_mm.txt"  # mouse (当前使用的：小鼠转录因子列表文件路径)
 # 该变量存储了用于 SCENIC 分析的转录因子（TF）基因名称列表的路径。
 # 它是 SCENIC 步骤 1 (共表达网络构建) 的重要输入，定义了需要分析的“候选调控子”。
@@ -180,7 +181,7 @@ f_loom_path_scenic = '/home/lcpyspa/spa/spa07/scenic.loom'
 %%bash
 
 # 切换到 SCENIC 分析的工作目录
-cd /data/07_co_expression/scenic_st
+cd /home/lcpyspa/spa/07_co_expression/scenic_st
 
 # 运行 pySCENIC 的 grn 模块进行共表达网络推断
 pyscenic grn \
@@ -193,7 +194,7 @@ pyscenic grn \
 # 读取 SCENIC GRN 推断结果
 
 adjacencies = pd.read_csv(
-    "/data/07_co_expression/scenic_st/adj.csv", 
+    "/home/lcpyspa/spa/07_co_expression/scenic_st/adj.csv", 
     index_col=False,         # 不使用任何列作为索引（默认索引为 0, 1, 2...）
     sep=','                  # 指定文件分隔符为逗号（,），表明这是一个 CSV 文件
 )
@@ -217,19 +218,19 @@ import glob
 import os 
 
 # 导入所需的库：glob用于查找文件，os用于操作系统交互（如改变目录）
-os.chdir('/data/07_co_expression/scenic_st')
+os.chdir('/home/lcpyspa/spa/07_co_expression/scenic_st')
 # 改变当前工作目录（Change Directory）
 # 目的：将当前环境的工作路径设置到 SCENIC 文件的存储位置，方便后续操作和文件读写
 
 # --- SCENIC 步骤 2 & 3 所需的文件路径配置 ---
 
 # motif databases
-f_motif_path = "/data/07_co_expression/scenic_st/motifs-v10nr_clust-nr.mgi-m0.001-o0.0.tbl"
+f_motif_path = "/home/lcpyspa/spa/07_co_expression/scenic_st/motifs-v10nr_clust-nr.mgi-m0.001-o0.0.tbl"
 # 转录因子基序表 (Motif Table) 路径。
 # 这是 SCENIC 步骤 2 的关键输入，包含了 TF 的 DNA 结合位点信息
 # SCENIC 将使用这个文件来验证 TF 是否真的能结合到其共表达靶基因的启动子上
 
-f_db_names = '/data/07_co_expression/scenic_st/mm10_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather'
+f_db_names = '/home/lcpyspa/spa/07_co_expression/scenic_st/mm10_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather'
 # 基因-基序排名数据库 (Motif Ranking Database) 路径
 # 这是 SCENIC 步骤 2 的主要数据库输入。它预计算了所有基因相对于所有 TF 基序的富集排名，
 # 用于快速确定共表达基因是否富集了特定的 TF 基序
@@ -239,12 +240,53 @@ f_pyscenic_output = "pyscenic_output.loom"
 # 该文件（Loom 格式）将包含 SCENIC 步骤 3 (AUCell) 推断出的，
 # 每个 Spot/细胞中每个 Regulon 的最终活性得分（Regulon Activity Scores）
 
+
+
+# %% 查看一下 TBL 文件。
+import pandas as pd
+
+motif_file = (
+    "/home/lcpyspa/spa/07_co_expression/scenic_st/"
+    "motifs-v10nr_clust-nr.mgi-m0.001-o0.0.tbl"
+)
+
+motif_df = pd.read_csv(motif_file, sep="\t", nrows=20)
+motif_df = motif_df.rename(columns={"#motif_id": "motif_id"})
+
+motif_df[
+    [
+        "motif_id",
+        "motif_name",
+        "motif_description",
+        "source_name",
+        "gene_name",
+        "motif_similarity_qvalue",
+        "orthologous_identity",
+    ]
+].head()
+
+# %% 查看下 Ranking 文件。
+import pyarrow.feather as feather
+
+rank_file = (
+    "/home/lcpyspa/spa/07_co_expression/scenic_st/"
+    "mm10_10kbp_up_10kbp_down_full_tx_v10_clust."
+    "genes_vs_motifs.rankings.feather"
+)
+
+rank_sample = feather.read_table(
+    rank_file,
+    columns=["Actb", "motifs"],
+).to_pandas()
+
+rank_sample.head()
+
 # %%
 !pyscenic ctx adj.tsv \
     {f_db_names} \
     --annotations_fname {f_motif_path} \
     --expression_mtx_fname {f_loom_path_scenic} \
-    --output /data/07_co_expression/scenic_st/reg.csv \
+    --output /home/lcpyspa/spa/07_co_expression/scenic_st/reg.csv \
     --mask_dropouts \
     --num_workers 20
 
@@ -289,7 +331,7 @@ lf = lp.connect(f_pyscenic_output, mode='r+', validate=False )
 # 使用 loompy.connect() 打开 SCENIC 第三步 (AUCell) 生成的 .loom 文件。
 # mode='r+': 以读写模式打开（虽然这里只读，但 r+ 确保权限足够）。
 # validate=False: 跳过文件内部结构验证，提高连接速度。
-
+print(lf)
 # 提取 RegulonsAUC 矩阵
 auc_mtx = pd.DataFrame(
     lf.ca.RegulonsAUC,  # 从 Loom 文件的列属性 (Cell Attributes, ca) 中提取 RegulonsAUC 矩阵。
@@ -358,6 +400,12 @@ regulons = lf.ra.Regulons
 auc_mtx
 
 # %%
+print(meta)
+print(regulons)
+
+
+# %%
+
 # --- Regulon 名称的统一格式化清理 ---
 
 # 1. 格式化 AUCell 活性矩阵 (auc_mtx) 的列名
@@ -376,6 +424,13 @@ regulons.dtype.names = tuple( [ x.replace("(","_(") for x in regulons.dtype.name
 rt = meta['regulonThresholds']
 # 提取 meta 字典中存储的 Regulon 活性阈值列表 (rt)
 # 这个列表通常包含每个 Regulon 的名称 ('regulon') 和对应的活性二值化阈值
+
+
+# %%
+print(rt)
+print(regulons)
+
+# %%
 for i,x in enumerate(rt):
     tmp = x.get('regulon').replace("(","_(")
     # 提取字典中的 'regulon' 键值 (即名称)，并进行格式替换。
@@ -419,7 +474,6 @@ metaJson["regulonThresholds"] = rt
 # 整合前面步骤中处理和格式化过的 Regulon 活性二值化阈值列表 (rt)
 # 这是 SCENIC 特有的元数据，用于后续将连续的 AUCell 活性得分二值化为 'ON'/'OFF' 状态
 
-metaJson["regulonThresholds"] = rt
 
 
 # %%
@@ -481,6 +535,8 @@ col_attrs = {
     "RegulonsAUC": dfToNamedMatrix(auc_mtx),
     # **核心结果**：使用自定义函数将 Pandas DataFrame 格式的 AUCell 活性矩阵转换为 NumPy 结构化数组。
     # Loom 文件要求 ColAttrs 必须是 NumPy 数组。
+    
+    "clusters": np.array(adata.obs["clusters"].values)
 }
 
 # --- 2. 定义 Loom 文件的行属性 (RowAttrs, 对应基因) ---
@@ -495,7 +551,7 @@ row_attrs = {
 # --- 3. 定义 Loom 文件的全局属性 (Attrs) ---
 attrs = {
     "title": "sampleTitle", # 文件标题
-    "Genome": "hg38",       # 基因组版本
+    "Genome": "mm10",       # 基因组版本
     "SCopeTreeL1": "",      # 留空，用于 SCope 可视化工具的自定义分类层级
     "SCopeTreeL2": "",
     "SCopeTreeL3": ""
@@ -529,7 +585,7 @@ row_attrs = {
 # %%
 # --- 创建最终的 SCENIC 结果 Loom 文件 ---
 lp.create(
-    filename = '/data/07_co_expression/scenic_st/final_out.loom' ,
+    filename = '/home/lcpyspa/spa/07_co_expression/scenic_st/final_out.loom' ,
     # 指定输出文件的完整路径和名称。这是包含所有结果的最终文件。
     layers=lf[:,:],
     # 核心矩阵：写入原始 Loom 文件 (lf) 中的所有层级数据。
